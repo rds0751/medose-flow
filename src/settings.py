@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'src.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgres://dbmasteruser:pb2d80740f512c8cb41341e3291ed05b6b3d480a@ls-a07cbeba589bf3627f5b8d491480fea2437bda3f.cx5hjestaeeq.ap-south-1.rds.amazonaws.com:5432/postgres',
+        default='postgres://dbmasteruser:pb2d80740f512c8cb41341e3291ed05b6b3d480a@ls-b59a2149ba33db4c7e13deb45eac3c5f42b5b1b5.crh3fg2dgzpj.ap-southeast-1.rds.amazonaws.com:5432/postgres',
         conn_max_age=600)}
 
 # Password validation
