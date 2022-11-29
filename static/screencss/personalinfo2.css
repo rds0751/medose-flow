@@ -1,0 +1,172 @@
+
+*{
+padding: 0%;
+margin: 0%;
+box-sizing: border-box;
+}
+body{
+margin-top: 2rem;
+margin-bottom: 2rem;
+background-color:#edf0f5 ;
+font-family:sans-serif;
+font-size: 10px;
+}
+::placeholder{
+/* color: rgb(168, 150, 150); */
+font-size: 16px;
+}
+.body-container{
+
+
+margin:auto;
+max-width: 60%;
+max-height: 120%;
+/* border-radius: 1rem; */
+background-color: #fff;
+padding-left: 7px;
+padding-right: 7px;
+box-shadow: 1px 1px 2px #3a3a3a;
+margin-top: 100px;
+
+
+}
+
+.form{
+margin: auto;
+
+}
+.names-info-input{
+    padding: 10px;
+    color: white;
+    font-size: 17px;
+}
+.inputmain-div{
+    /* position: absolute; */
+    background-color: #780c64;
+    color: white;
+    width: auto;
+    height: 40px;
+    margin-left: -7px;
+    border-radius: 5px;
+    font-size: 17px;
+    margin-right: -7px;
+    
+}
+.sign-up{
+text-align: center;
+color: #780c64;
+font-family: sans-serif;
+font-size: 20px;
+padding-top: 0.5rem;
+margin-right: 390px;
+white-space: nowrap;
+
+}
+.easy{
+text-align: center;
+font-family: sans-serif;
+font-size: 12px;
+line-height: 15px;
+
+}
+.second-input{
+display: flex;
+gap:1rem ;
+margin-top: 0.5rem;
+width: 90%;
+height: 38px;
+margin-left: 29px;  
+}
+.therd-input{
+display: flex;
+gap:1rem ;
+margin-top: 0.5rem;
+width: 90%;
+height: 38px;
+margin-left: 29px;   
+}
+
+.first-input{
+display: flex;
+gap:1rem ;
+margin-top: 0.5rem;
+width: 90%;
+height: 30px;
+margin-left: 29px;
+
+
+
+}
+.first-input input{
+width: 50%;
+border-radius: 5px;
+padding: 4px;
+outline: none;
+border: 0.5px solid ;
+
+}
+.Marital-Status-input{
+width: 50%;
+height: 30px;
+border-radius: 5px;
+padding: 4px;
+font-size: 16px;
+margin-top:8px ;
+outline: none;
+border: 0.5px solid ;
+color: gray; 
+}
+.number{
+display: flex;
+width: 50%;
+margin-top: 0.5rem;
+border-radius: 5px;
+padding: 4px;
+outline: none;
+border: 0.5px solid ;
+}
+.birthday{
+margin-top: 0.5rem;
+margin-left: 30px;
+
+}
+.gender{
+margin-bottom: -0.5rem;
+margin-top: 0.5rem;
+margin-left: 30px;
+
+}
+
+
+#date{
+
+padding: 4px;
+outline: none;
+border: 0.5px solid;
+border-radius: 5px;
+font-size: 10px;
+color: rgb(168, 150, 150);
+
+}
+
+
+
+
+.btn2  {
+width: 150px;
+color: #fff;
+background-color: #780c64;
+border: none;
+padding: 8px;
+font-size: 12px;
+border-radius: 3px;
+cursor: pointer;
+margin-left: 20% ;
+margin-bottom: 3rem;
+margin-top: 0.5rem;
+
+}
+.btn2:hover{
+    background-color:#660e60;
+}
+

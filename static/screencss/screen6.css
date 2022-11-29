@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .screen-6-main-div{
+    display: flex;
+    width: 100%;
+    height: auto;
+  }
+  .card{
+    display: flex;
+    flex-direction: row;
+    }
+  .screen-6-div-1{
+    width: 22%;
+    max-width: 380px;
+    min-width: 300px;
+    background-color: rgba(105, 108, 255, 0.16) !important;
+    padding: 20px;
+    border-radius: 5px;
+    
+  }
+  section{
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+  }
+
+  .text-color{
+color: #780c64 !important;
+  }
+  .text-color-2{
+color: red;
+  }
+  .screen-6-div-2{
+   width: 78%;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: 850px;
+   
+   
+  }
+  .screen-6-calender{
+    
+    border-radius: 15px;
+    height:40px ;
+    width: 140px;
+    margin: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color:white !important;
+    color: #780c64 !important;
+    padding: 5px;
+  }
+  .screen-6-div-child-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .screen-6-div-child-2{
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+  .screen-6-div-1-button{
+    color: #780c64 !important;
+    background-color: white !important;
+    margin-top: 20px;
+    width: 240px;
+    height: 40px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+  }
+  .screen-6-div-1-button:hover{
+    background-color: #780c64 !important;
+    color: white !important;
+  }
+ .screen-1st-div-button{
+    border-radius: 15px;
+    height:52px ;
+    width: 52px;
+    margin: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color:white !important;
+    color: #780c64 !important;
+ }
+ .screen-1st-div-button:hover{
+    background-color:#780c64 !important;
+    color: white !important;
+
+ }
+
+
+
+
+
+  
+
+  /* part 2 cssxssssssssss */
+
+  .s-6d-2-flex-property-div{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width:320px) and (max-width:900px){
+    .screen-6-main-div{
+        flex-direction: column;
+       
+    }
+
+    .screen-6-div-1{
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 580px;
+      min-width: 300px;
+      background-color: rgba(105, 108, 255, 0.16) !important;
+      padding: 20px;
+      border-radius: 5px;
+      
+    }
+
+    
+  }
+
+  @media print {
+    body, .screen-6-div-2 * {
+      visibility: hidden;
+    }
+    .screen-6-div-2 * {
+      visibility: visible !important;
+    }
+    .screen-6-div-2 {
+      position: absolute !important;
+      /* left: 0;
+      top: 0; */
+      margin: 0;
+      padding: 0;
+      max-width: 1500px;
+      width: 90%;
+    }
+    .mt-4 {
+      margin-top: -10.5rem !important;
+    }
+  }

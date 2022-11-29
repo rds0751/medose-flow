@@ -1,22 +1,49 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+class Specialization(models.Model):
+    name = models.CharField(max_length=255)
 
+class Hospital(models.Model):
+    name=models.CharField(max_length=40)
+    logo=models.ImageField(upload_to='hospital/logos')
+    address=models.TextField(max_length=200) 
+    phone=models.CharField(max_length=15)
+    specializations=models.ManyToManyField(Specialization)
 
-departments=[('Cardiologist','Cardiologist'),
-('Dermatologists','Dermatologists'),
-('Emergency Medicine Specialists','Emergency Medicine Specialists'),
-('Allergists/Immunologists','Allergists/Immunologists'),
-('Anesthesiologists','Anesthesiologists'),
-('Colon and Rectal Surgeons','Colon and Rectal Surgeons')
-]
+class Department(models.Model):
+    name=models.CharField(max_length=100)
+    hospital=models.ForeignKey(Hospital, on_delete=models.DO_NOTHING)
+
+    def __str__(self):
+        return self.name
+
+class Medicine(models.Model):
+    name=models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+class Symptom(models.Model):
+    name=models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+class Test(models.Model):
+    name=models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
 class Doctor(models.Model):
     user=models.OneToOneField(User,on_delete=models.CASCADE)
     profile_pic= models.ImageField(upload_to='profile_pic/DoctorProfilePic/',null=True,blank=True)
     address = models.CharField(max_length=40)
     mobile = models.CharField(max_length=20,null=True)
-    department= models.CharField(max_length=50,choices=departments,default='Cardiologist')
+    department=models.ForeignKey(Department, on_delete=models.CASCADE)
     status=models.BooleanField(default=False)
+
     @property
     def get_name(self):
         return self.user.first_name+" "+self.user.last_name
@@ -25,7 +52,6 @@ class Doctor(models.Model):
         return self.user.id
     def __str__(self):
         return "{} ({})".format(self.user.first_name,self.department)
-
 
 
 class Patient(models.Model):
@@ -37,6 +63,7 @@ class Patient(models.Model):
     assignedDoctorId = models.PositiveIntegerField(null=True)
     admitDate=models.DateField(auto_now=True)
     status=models.BooleanField(default=False)
+
     @property
     def get_name(self):
         return self.user.first_name+" "+self.user.last_name
@@ -54,6 +81,7 @@ class Appointment(models.Model):
     doctorName=models.CharField(max_length=40,null=True)
     appointmentDate=models.DateField(auto_now=True)
     description=models.TextField(max_length=500)
+    time=models.DateTimeField(null=True)
     status=models.BooleanField(default=False)
 
 
@@ -76,7 +104,3 @@ class PatientDischargeDetails(models.Model):
     OtherCharge=models.PositiveIntegerField(null=False)
     total=models.PositiveIntegerField(null=False)
 
-
-#Developed By : sumit kumar
-#facebook : fb.com/sumit.luv
-#Youtube :youtube.com/lazycoders

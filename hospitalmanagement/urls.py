@@ -1,15 +1,3 @@
-"""
-
-Developed By : sumit kumar
-facebook : fb.com/sumit.luv
-Youtube :youtube.com/lazycoders
-
-
-"""
-
-
-
-
 from django.contrib import admin
 from django.urls import path
 from hospital import views
@@ -34,9 +22,9 @@ urlpatterns = [
     path('doctorsignup', views.doctor_signup_view,name='doctorsignup'),
     path('patientsignup', views.patient_signup_view),
     
-    path('adminlogin', LoginView.as_view(template_name='hospital/adminlogin.html')),
-    path('doctorlogin', LoginView.as_view(template_name='hospital/doctorlogin.html')),
-    path('patientlogin', LoginView.as_view(template_name='hospital/patientlogin.html')),
+    path('adminlogin', LoginView.as_view(template_name='hospital/admin/adminlogin.html')),
+    path('doctorlogin', LoginView.as_view(template_name='hospital/doctor/doctorlogin.html')),
+    path('patientlogin', LoginView.as_view(template_name='hospital/patient/patientlogin.html')),
 
 
     path('afterlogin', views.afterlogin_view,name='afterlogin'),
@@ -109,6 +97,4 @@ urlpatterns +=[
 
 ]
 
-#Developed By : sumit kumar
-#facebook : fb.com/sumit.luv
-#Youtube :youtube.com/lazycoders
+

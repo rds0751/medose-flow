@@ -1,0 +1,206 @@
+
+.dddd{
+    color: green;
+}
+
+
+
+
+.card{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+body {
+	background: #f1f1f1;
+	font-family: Arial, Helvetica, sans-serif;
+	overflow-x: hidden;
+	margin: 0;
+}
+
+.side_bar_2 {
+	height: 100%;
+	position: fixed;
+	width: min-content;
+	background-color: White;
+	transition: 0.5s;
+	margin-top: -10px;
+}
+
+li {
+	list-style-type: none;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: grey;
+	text-decoration: none;
+}
+
+.nav_option_2 {
+	padding: 10px;
+	border-bottom: 1px solid #cecece;
+	width: 200px;
+	transition: 0.2s;
+}
+
+.nav_option_2:hover {
+	padding: 10px;
+	border-bottom: 1px solid #cecece;
+	width: 200px;
+  color: #780c64 !important;
+    
+	border-left: 3px solid grey;
+}
+
+.nav_option_2:active {
+	padding: 10px;
+	border-bottom: 1px solid #cecece;
+	width: 200px;
+   
+	border-left: 0;
+}
+
+.logout_btn_grtgd {
+	color: #cc1515c4;
+}
+
+h1 {
+	margin: 0;
+}
+
+/*DASHBOARD LOACATION*/
+
+.location_header {
+	background: white;
+	margin: 10px;
+	padding: 10px;
+	width: auto;
+	color: grey;
+	border-radius: 4px;
+	border: 1px solid #a0a0a05e;
+	box-shadow: 0px 0px 9px #d2d2d2;
+	font-weight: 600;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.all_holder {
+	object-fit: cover;
+	margin-left: 220px;
+}
+
+
+/* .newconsult:hover{
+
+    color: #FFFFFF;
+    background-color: #780c64;
+    
+} */
+
+
+section button {
+    margin: 0 auto;
+    font-size: 1.0rem;
+    margin: 10px;
+    padding: 0.5rem 1rem;
+    display: block;
+    background-color: #FFFFFF !important;
+    border: 2px solid #780c64 !important;
+    color: #780c64 !important;
+    font-weight: 300;
+    -webkit-border-radius: 3px;
+    border-radius: 6px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  section button:hover {
+    background-color: #780c64 !important;
+    color: #FFFFFF !important;
+   
+  }
+  
+
+/* -- DEFAULTS -- */
+
+
+  
+  /* -- FLUID GRID STYLES -- */
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    background-color: transparent;
+    padding: 10px;
+  }
+  .item2{
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+  .grid-container > div {
+    background-color: #FFFFFF;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+  
+  .item1 {
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+
+  .medical{
+    color: black;
+    text-align: left;
+    margin-top: -15px;
+    margin-left: 10px;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .medica2{
+    color: grey;
+    text-align: left;
+    line-height: 11px;
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .medica3{
+    color: black;
+    text-align: left;
+    line-height: 12px;
+    margin-left: 10px;
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  .no-vaccine{
+    color: #780c64;
+    font-weight: 700;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .vaccine{
+    max-width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .start-consult{
+    color: #D3D3D3;
+    text-align: center;
+    line-height: 25px;
+    margin-top: 120px;
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: 400;
+  }
+
