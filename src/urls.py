@@ -9,7 +9,7 @@ from django.contrib.auth.views import LoginView,LogoutView
 urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),
     path('admin/', admin.site.urls),
-    path('',views.home_view,name=''),
+    path('',LoginView.as_view(template_name='hospital/admin/adminlogin.html')),
     path('shop/', include(apps.get_app_config('oscar').urls[0])),
 
 
