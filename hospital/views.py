@@ -168,7 +168,8 @@ def admin_dashboard_view(request):
 @login_required(login_url='adminlogin')
 @user_passes_test(is_admin)
 def admin_doctor_view(request):
-    return render(request,'hospital/admin/admin_doctor.html')
+    doctors=models.Doctor.objects.all().filter(status=True)
+    return render(request,'hospital/admin/admin_doctor.html',{'doctors':doctors})
 
 
 
@@ -283,7 +284,8 @@ def admin_view_doctor_specialisation_view(request):
 @login_required(login_url='adminlogin')
 @user_passes_test(is_admin)
 def admin_patient_view(request):
-    return render(request,'hospital/admin/admin_patient.html')
+    patients=models.Patient.objects.all().filter(status=True)
+    return render(request,'hospital/admin/admin_patient.html',{'patients':patients})
 
 
 
@@ -494,7 +496,8 @@ def download_pdf_view(request,pk):
 @login_required(login_url='adminlogin')
 @user_passes_test(is_admin)
 def admin_appointment_view(request):
-    return render(request,'hospital/admin/admin_appointment.html')
+    appointments=models.Appointment.objects.all().filter(status=True)
+    return render(request,'hospital/admin/admin_appointment.html',{'appointments':appointments})
 
 
 
@@ -505,6 +508,8 @@ def admin_view_appointment_view(request):
     return render(request,'hospital/admin/admin_view_appointment.html',{'appointments':appointments})
 
 
+def startConsult(request):
+    return render(request,'hospital/start.html')
 
 @login_required(login_url='adminlogin')
 @user_passes_test(is_admin)
@@ -513,14 +518,13 @@ def admin_add_appointment_view(request):
     mydict={'appointmentForm':appointmentForm,}
     if request.method=='POST':
         appointmentForm=forms.AppointmentForm(request.POST)
-        if appointmentForm.is_valid():
-            appointment=appointmentForm.save(commit=False)
-            appointment.doctorId=request.POST.get('doctorId')
-            appointment.patientId=request.POST.get('patientId')
-            appointment.doctorName=models.User.objects.get(id=request.POST.get('doctorId')).first_name
-            appointment.patientName=models.User.objects.get(id=request.POST.get('patientId')).first_name
-            appointment.status=True
-            appointment.save()
+        appointment=appointmentForm.save(commit=False)
+        appointment.doctorId=request.POST.get('doctorId')
+        appointment.patientId=request.POST.get('patientId')
+        appointment.doctorName=models.User.objects.get(id=request.POST.get('doctorId')).first_name
+        appointment.patientName=models.User.objects.get(id=request.POST.get('patientId')).first_name
+        appointment.status=True
+        appointment.save()
         return HttpResponseRedirect('admin-view-appointment')
     return render(request,'hospital/admin/admin_add_appointment.html',context=mydict)
 

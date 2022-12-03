@@ -48,7 +48,6 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <br><br>
-<!------ add appointment page by admin(sumit)  ---------->
 <form method="post">
   {% csrf_token %}
   <div class="container register-form">
@@ -68,13 +67,9 @@
             <div class="form-group">
               {% render_field appointmentForm.patientId class="form-control" placeholder="patient" %}
             </div>
-            <div class="form-group">
-              {% comment %} <input type="datetime" class="form-control" placeholder="Date & Time" name="time" value="2021-09-09" min="2021-09-09"> {% endcomment %}
-              {% render_field appointmentForm.date class="form-control" type="date" placeholder="date" %}
-            </div><div class="form-group">
-              {% comment %} <input type="datetime" class="form-control" placeholder="Date & Time" name="time" value="2021-09-09" min="2021-09-09"> {% endcomment %}
-              {% render_field appointmentForm.time class="form-control" type="time" placeholder="time" %}
-            </div>
+            {% comment %} <div class="form-group">
+              {% render_field appointmentForm.time class="form-control" type="datetime-local" placeholder="time" %}
+            </div> {% endcomment %}
 
           </div>
 
